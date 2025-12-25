@@ -1,0 +1,18 @@
+@using Radzen
+@using Radzen.Blazor
+@rendermode InteractiveServer
+
+<RadzenHeader>
+	<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0" JustifyContent="JustifyContent.SpaceBetween" Style="width: 100%;">
+		<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+			<RadzenSidebarToggle Click="@OnToggleClick" />
+			<RadzenLabel Text="DbTest" Style="margin-left: 1rem;" />
+		</RadzenStack>
+		<RadzenLink Text="About" Path="https://learn.microsoft.com/aspnet/core/" Target="_blank" Style="margin-right: 1rem;" />
+	</RadzenStack>
+</RadzenHeader>
+
+@code {
+	[Parameter]
+	public EventCallback OnToggleClick { get; set; }
+}

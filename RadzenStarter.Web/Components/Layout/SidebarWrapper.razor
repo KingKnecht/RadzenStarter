@@ -1,0 +1,19 @@
+@using Radzen
+@using Radzen.Blazor
+@rendermode InteractiveServer
+
+<RadzenSidebar @bind-Expanded="@IsExpanded">
+	<RadzenPanelMenu>
+		<RadzenPanelMenuItem Text="Home" Icon="home" Path="" />
+		<RadzenPanelMenuItem Text="Counter" Icon="add_box" Path="counter" />
+		<RadzenPanelMenuItem Text="Weather" Icon="list" Path="weather" />
+	</RadzenPanelMenu>
+</RadzenSidebar>
+
+@code {
+	[Parameter]
+	public bool IsExpanded { get; set; } = true;
+
+	[Parameter]
+	public EventCallback<bool> IsExpandedChanged { get; set; }
+}

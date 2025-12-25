@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="RadzenStarter.ApiService/RadzenStarter.ApiService.csproj" />
+  <Project Path="RadzenStarter.AppHost/RadzenStarter.AppHost.csproj" />
+  <Project Path="RadzenStarter.ServiceDefaults/RadzenStarter.ServiceDefaults.csproj" />
+  <Project Path="RadzenStarter.Web/RadzenStarter.Web.csproj" />
+</Solution>

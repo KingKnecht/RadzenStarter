@@ -1,0 +1,16 @@
+﻿<Project Sdk="Aspire.AppHost.Sdk/13.1.0">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>72cbd713-59cc-4525-8b03-74dfc353d1b8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RadzenStarter.ApiService\RadzenStarter.ApiService.csproj" />
+    <ProjectReference Include="..\RadzenStarter.Web\RadzenStarter.Web.csproj" />
+  </ItemGroup>
+
+</Project>

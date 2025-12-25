@@ -1,0 +1,34 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+@inject NotificationService NotificationService
+@using Radzen
+@using Radzen.Blazor
+<PageTitle>Counter</PageTitle>
+
+<RadzenText TextStyle="TextStyle.H6">Counter</RadzenText>
+
+<p role="status">Current count: @currentCount</p>
+
+<RadzenButton Text="Click me" Click="@IncrementCount" ButtonStyle="ButtonStyle.Primary" />
+<RadzenButton Text="Notify me" Click="@ShowNotification" ButtonStyle="ButtonStyle.Primary" />
+
+@code {
+	private int currentCount = 0;
+
+	private void IncrementCount()
+	{
+		currentCount++;
+	}
+
+	private void ShowNotification()
+	{
+		NotificationService.Notify(new NotificationMessage
+		{
+			Severity = NotificationSeverity.Success,
+			Summary = "Success Summary",
+			Detail = "Success Detail",
+			Duration = 4000
+		});
+	}
+
+}
